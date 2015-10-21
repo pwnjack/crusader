@@ -5,28 +5,28 @@
 */
 
 // Extra small devices (767px)
-@media (max-width: @screen-xs-max) {
+@media (max-width: $screen-xs-max) {
 
 	
 
 }
 
 // Small devices (from 768px to 991px)
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
 	
 
 }
 
 // Medium devices (from 992px to 1199px)
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 
 	
 
 }
 
 // Large devices (from 1200px and up)
-@media (min-width: @screen-lg-min) {
+@media (min-width: $screen-lg-min) {
 
 	
 

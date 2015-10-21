@@ -1,7 +1,7 @@
 # Crusader
 Purge the evil from frontend development
 
-As we all know evil dwells deeply within CSS and HTML, just poorly scalable and maintainable. Crusader comes in handy, providing a complete coding environment to make static web development as painless as possible. With Crusader you can take the advantages of more versatile languages like [Jade](http://jade-lang.com) and [Sass](http://sass-lang.com) to make you workflow smooth, efficient and flexible.
+As we all know evil dwells deeply within CSS and HTML, just poorly scalable and maintainable. Crusader comes in handy, providing a complete coding environment to make static web development as painless as possible. With Crusader you can take the advantages of more versatile languages like [Jade](http://jade-lang.com) and [Sass](http://sass-lang.com) to make your workflow smooth, efficient and flexible.
 
 Crusader also features a local web-server ([BrowserSync](http://www.browsersync.io)) to preview your work while you are developing, and some other interesting features, read on for more information.
 
