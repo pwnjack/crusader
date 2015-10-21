@@ -1,0 +1,6 @@
+node_modules
+app/bower_components
+app/.tmp
+app/*.html
+dist
+.DS_Store

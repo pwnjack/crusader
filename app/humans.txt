@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    pwnjack -- Web Designer -- @pwnjack -- <pwnjack@gmail.com>
+
+# THANKS
+
+    Crusader -- Project -- http://github.com/pwnjack/crusader
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JS
+    jQuery, Modernizr, Bootstrap, Font-awesome
