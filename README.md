@@ -73,9 +73,9 @@ And you can get back to work on your code.
 
 If you want to install an asset that is not available on Bower you can do it by copy-pasting it's code in to the following files (depending on code language):
 
-- Javascript into "app/scripts/plugins.js"
-- CSS into "app/styles/includes/_plugins.scss"
-- For images and fonts you need to add their full path reference into "config.json"
+- Javascript into "app/plugins/*.js"
+- CSS into "app/styles/partials/_plugins.scss"
+- For images and fonts you have to add their full path reference into "config.json"
 
 If you decide to use this last feature remember to uncomment the code lines related to [config.json](https://github.com/pwnjack/crusader/blob/master/config.json) inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js) (lines 10, 40, 41, 52, 53).
 

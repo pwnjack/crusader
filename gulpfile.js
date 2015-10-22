@@ -12,10 +12,10 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
 	return gulp.src('app/styles/main.scss')
 	.pipe($.sourcemaps.init())
-    .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe($.sourcemaps.write('.tmp/maps'))
-    .pipe(gulp.dest('app/.tmp'))
+	.pipe($.sass().on('error', $.sass.logError))
+	.pipe($.autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+	.pipe($.sourcemaps.write('.tmp/maps'))
+	.pipe(gulp.dest('app/.tmp'))
 	.pipe(reload({stream:true}));
 });
 
@@ -41,10 +41,10 @@ gulp.task('images', ['clear_cache'], function() {
 	// .pipe(gulp.dest('dist/images'))
 	return gulp.src('app/images/*')
 	.pipe($.cache($.imagemin({
-        optimizationLevel: 3,
-        progressive: true,
-        interlaced: true
-    })))
+		optimizationLevel: 3,
+		progressive: true,
+		interlaced: true
+	})))
 	.pipe(gulp.dest('dist/images'))
 });
 
@@ -62,10 +62,10 @@ gulp.task('extra', function() {
 });
 
 gulp.task('inject', function () {
-    return gulp.src(['app/views/master.jade'])
-    .pipe($.inject(gulp.src(mainBowerFiles(), {read: false, cwd: 'app'}), {name: 'bower', relative: false}))
-    .pipe($.inject(gulp.src('bower_components/modernizr/modernizr.js', {read: false, cwd: 'app'}), {name: 'modernizr', relative: false}))
-    .pipe(gulp.dest('app/views'));
+	return gulp.src(['app/views/master.jade'])
+	.pipe($.inject(gulp.src(mainBowerFiles(), {read: false, cwd: 'app'}), {name: 'bower', relative: false}))
+	.pipe($.inject(gulp.src('bower_components/modernizr/modernizr.js', {read: false, cwd: 'app'}), {name: 'modernizr', relative: false}))
+	.pipe(gulp.dest('app/views'));
 });
 
 gulp.task('jade', function() {
@@ -80,27 +80,27 @@ gulp.task('jade', function() {
 });
 
 gulp.task('start', ['inject'], function() {
-    gulp.start('styles', 'scripts', 'jade');
+	gulp.start('styles', 'scripts', 'jade');
 });
 
 gulp.task('clean', function(cb) {
-    del(['dist', 'app/.tmp', 'app/*.html'], cb)
+	del(['dist', 'app/.tmp', 'app/*.html'], cb)
 });
 
 gulp.task('deploy', function () {
-	var gulpif = require('gulp-if');
-    var assets = $.useref.assets();
-    return gulp.src('app/*.html')
-    .pipe(assets)
-    .pipe(gulpif('*.js', $.uglify()))
-    .pipe(gulpif('*.css', $.nano()))
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe(gulp.dest('dist'));
+	var gulpif = require('gulp-if'),
+		assets = $.useref.assets();
+	return gulp.src('app/*.html')
+	.pipe(assets)
+	.pipe(gulpif('*.js', $.uglify()))
+	.pipe(gulpif('*.css', $.nano()))
+	.pipe(assets.restore())
+	.pipe($.useref())
+	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('build', ['start'], function() {
-    gulp.start('deploy', 'images', 'fonts', 'extra');
+	gulp.start('deploy', 'images', 'fonts', 'extra');
 });
 
 gulp.task('watch', function() {
@@ -111,9 +111,9 @@ gulp.task('watch', function() {
 
 gulp.task('serve', ['watch'], function() {
 	browserSync({
-	server: {
-	  baseDir: 'app'
-	}
+		server: {
+			baseDir: 'app'
+		}
 	});
 	gulp.watch(['*.html', '.tmp/main.css', '.tmp/main.js'], {cwd: 'app'}, reload);
 });
