@@ -6,7 +6,7 @@ As we all know evil dwells deeply within CSS and HTML, just poorly scalable and 
 Crusader also features a local web-server ([BrowserSync](http://www.browsersync.io)) to preview your work while you are developing, and some other interesting features, read on for more information.
 
 ## Getting Started
-To run Crusader you need all the following softwares installed in your computer.
+To run Crusader you need all the following softwares installed on your computer.
 
  - [Node](http://nodejs.org)
  - [Npm](https://www.npmjs.com)
