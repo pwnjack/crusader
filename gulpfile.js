@@ -2,7 +2,7 @@
 
 var gulp = require('gulp'),
 	$ = require('gulp-load-plugins')(),
-	mainBowerFiles = require('main-bower-files'),
+	wiredep = require('wiredep').stream,
 	del = require('del'),
 	browserSync = require('browser-sync'),
 	reload = browserSync.reload;
@@ -14,13 +14,13 @@ gulp.task('styles', function() {
 	.pipe($.sourcemaps.init())
 	.pipe($.sass().on('error', $.sass.logError))
 	.pipe($.autoprefixer('last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-	.pipe($.sourcemaps.write('.tmp/maps'))
+	.pipe($.sourcemaps.write('maps'))
 	.pipe(gulp.dest('app/.tmp'))
 	.pipe(reload({stream:true}));
 });
 
 gulp.task('scripts', function() {
-	return gulp.src('app/scripts/**/*.js')
+	return gulp.src(['app/scripts/**/*.js', '!app/scripts/plugins/modernizr.js'])
 	.pipe($.order([
 		"plugins/*.js",
 		"main.js"
@@ -61,11 +61,10 @@ gulp.task('extra', function() {
 	.pipe(gulp.dest('dist'))
 });
 
-gulp.task('inject', function () {
-	return gulp.src(['app/views/master.jade'])
-	.pipe($.inject(gulp.src(mainBowerFiles(), {read: false, cwd: 'app'}), {name: 'bower', relative: false}))
-	.pipe($.inject(gulp.src('bower_components/modernizr/modernizr.js', {read: false, cwd: 'app'}), {name: 'modernizr', relative: false}))
-	.pipe(gulp.dest('app/views'));
+gulp.task('wiredep', function () {
+  gulp.src('app/views/master.jade')
+    .pipe(wiredep({ignorePath: '../'}))
+    .pipe(gulp.dest('app/views'));
 });
 
 gulp.task('jade', function() {
@@ -79,7 +78,7 @@ gulp.task('jade', function() {
 	.pipe(reload({stream:true}));
 });
 
-gulp.task('start', ['inject'], function() {
+gulp.task('start', ['wiredep'], function() {
 	gulp.start('styles', 'scripts', 'jade');
 });
 
@@ -93,7 +92,7 @@ gulp.task('deploy', function () {
 	return gulp.src('app/*.html')
 	.pipe(assets)
 	.pipe(gulpif('*.js', $.uglify()))
-	.pipe(gulpif('*.css', $.nano()))
+	.pipe(gulpif('*.css', $.cssnano()))
 	.pipe(assets.restore())
 	.pipe($.useref())
 	.pipe(gulp.dest('dist'));
