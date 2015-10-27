@@ -24,6 +24,9 @@
     "bootstrap": "~3.3.5"
   },
   "overrides": {
+    "font-awesome": {
+      "main": "css/font-awesome.css"
+    },
     "bootstrap": {
       "main": [
         "dist/css/bootstrap.css",
