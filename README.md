@@ -61,9 +61,9 @@ When you have finished developing and your project is ready for production, buil
 Your project's optimized version will be stored in the freshly created "dist" folder.
 
 ## Helpers
-If you want to install an asset later on, stop the server in your terminal (CTRL+C), install the asset via Bower (as shown above) and then inject it's reference in your markup:
+If you want to install an asset later on, stop the server in your terminal (CTRL+C), install the asset via Bower (as shown above) and then wire it up in your markup:
 
-	gulp inject
+	gulp wiredep
 
 Then start the server again:
 
