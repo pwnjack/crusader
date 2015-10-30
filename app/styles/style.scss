@@ -26,3 +26,12 @@ a {
 	background: $btn-primary-bg;
 	border-color: $btn-primary-border;
 }
+
+.crusader {
+	margin: auto;
+	text-align: center;
+	img {
+		max-width: 100%;
+		margin: 50px 0 25px;
+	}
+}
