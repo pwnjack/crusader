@@ -5,27 +5,27 @@
 */
 
 // Colors
-$primary-color:					darken(#ff6600, 6.5%);
-$secondary-color:				#4d4d4d;
-$body-bg:						#fff;
+$primary-color:				darken(#ff6600, 6.5%);
+$secondary-color:			#4d4d4d;
+$body-bg:					#fff;
 
 // Typography
-$font-stack:					Helvetica, sans-serif;
-$font-primary-color:			#454545;
-$font-secondary-color:			#333333;
+$font-stack:				Helvetica, sans-serif;
+$font-primary-color:		#454545;
+$font-secondary-color:		#333333;
 
 // Links
-$link-color:					$primary-color;
-$link-hover-color:				darken($link-color, 15%);
+$link-color:				$primary-color;
+$link-hover-color:			darken($link-color, 15%);
 
 // Buttons
-$btn-default-color:				#333;
-$btn-default-bg:				#fff;
-$btn-default-border:			#ccc;
+$btn-default-color:			#333;
+$btn-default-bg:			#fff;
+$btn-default-border:		#ccc;
 
-$btn-primary-color:				#fff;
-$btn-primary-bg:				$primary-color;
-$btn-primary-border:			darken($btn-primary-bg, 5%);
+$btn-primary-color:			#fff;
+$btn-primary-bg:			$primary-color;
+$btn-primary-border:		darken($btn-primary-bg, 5%);
 
 
 // Media queries breakpoints
