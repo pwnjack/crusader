@@ -1,0 +1,14 @@
+/* =======================
+   Base
+   ======================= */
+
+body {
+	font-family: $font-stack;
+	color: $font-primary-color;
+	background: $body-bg;
+}
+
+a {
+	color: $primary-color;
+	&:hover {color: $link-hover-color;}
+}

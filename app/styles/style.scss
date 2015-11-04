@@ -1,37 +1,20 @@
-/*
- *
- * Style
- *
-*/
+/* =======================
+   Style
+   ======================= */
 
-body {
-	font-family: $font-stack;
-	color: $font-primary-color;
-	background: $body-bg;
-}
+@import 'config';
 
-a {
-	color: $primary-color;
-	&:hover {color: $link-hover-color;}
-}
+/* Fontface */
+@import 'partials/fontface';
 
-.btn-default {
-	color: $btn-default-color;
-	background: $btn-default-bg;
-	border-color: $btn-default-border;
-}
+/* SMACSS */
+@import 'partials/base';
+@import 'partials/layout';
+@import 'partials/modules';
+@import 'partials/state';
+@import 'partials/theme';
 
-.btn-primary {
-	color: $btn-primary-color;
-	background: $btn-primary-bg;
-	border-color: $btn-primary-border;
-}
-
-.crusader {
-	margin: auto;
-	text-align: center;
-	img {
-		max-width: 100%;
-		margin: 50px 0 25px;
-	}
-}
+/* Other */
+@import 'partials/plugins';
+@import 'partials/responsive';
+@import 'partials/shame';

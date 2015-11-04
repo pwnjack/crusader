@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 // var config = require('./config.json');
 
 gulp.task('styles', function() {
-	return gulp.src('app/styles/main.scss')
+	return gulp.src('app/styles/style.scss')
 	.pipe($.sourcemaps.init())
 	.pipe($.sass().on('error', $.sass.logError))
 	.pipe($.autoprefixer(

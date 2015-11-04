@@ -1,18 +1,20 @@
-/*
- *
- * Variables
- *
-*/
+/* =======================
+   Config
+   ======================= */
 
 // Colors
-$primary-color:				darken(#ff6600, 6.5%);
-$secondary-color:			#4d4d4d;
+$orange: 					#ff6600;
+$black:						#333333;
+
+$primary-color:				darken($orange, 6.5%); // #de5900
+$secondary-color:			$black;
 $body-bg:					#fff;
+$text-color:				$black;
 
 // Typography
-$font-stack:				Helvetica, sans-serif;
-$font-primary-color:		#454545;
-$font-secondary-color:		#333333;
+$font-stack:				'Proxima Nova', Helvetica, sans-serif;
+$font-primary-color:		$text-color;
+$font-secondary-color:		lighten($black, 15%);
 
 // Links
 $link-color:				$primary-color;
