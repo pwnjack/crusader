@@ -2,9 +2,12 @@
   "vendorFiles": {
     "fonts": [
       "app/bower_components/module-name/dist/fonts/**/*.*",
-      "app/bower_components/second-module-name/dist/fonts/**/*.*",
+      "app/bower_components/second-module-name/dist/fonts/**/*.*"
     ],
-    "images": [],
+    "images": [
+      "app/bower_components/module-name/dist/images/**/*.*",
+      "app/bower_components/module-name/dist/images/**/*.*"
+    ],
     "css": [],
     "js": []
   }

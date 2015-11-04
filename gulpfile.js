@@ -22,7 +22,7 @@ gulp.task('styles', function() {
 		'ios 6',
 		'android 4'
 	))
-	.pipe($.sourcemaps.write('maps'))
+	.pipe($.sourcemaps.write())
 	.pipe(gulp.dest('app/.tmp'))
 	.pipe(reload({stream:true}));
 });
@@ -86,13 +86,7 @@ gulp.task('extra', function() {
 	.pipe(gulp.dest('dist'))
 });
 
-gulp.task('wiredep', function () {
-  gulp.src('app/views/master.jade')
-    .pipe(wiredep({ignorePath: '../'}))
-    .pipe(gulp.dest('app/views'));
-});
-
-gulp.task('jade', function() {
+gulp.task('views', function() {
 	return gulp.src([
 		'app/views/*.jade',
 		'!app/views/master.jade',
@@ -107,15 +101,21 @@ gulp.task('jade', function() {
 	.pipe(reload({stream:true}));
 });
 
+gulp.task('wiredep', function () {
+  gulp.src('app/views/master.jade')
+    .pipe(wiredep({ignorePath: '../'}))
+    .pipe(gulp.dest('app/views'));
+});
+
 gulp.task('start', ['wiredep'], function() {
-	gulp.start('styles', 'scripts', 'jade');
+	gulp.start('styles', 'scripts', 'views');
 });
 
 gulp.task('clean', function(cb) {
 	del(['dist', 'app/.tmp', 'app/*.html'], cb)
 });
 
-gulp.task('deploy', function () {
+gulp.task('deploy', ['views'], function () {
 	var gulpif = require('gulp-if'),
 		assets = $.useref.assets();
 	return gulp.src('app/*.html')
@@ -132,7 +132,7 @@ gulp.task('build', ['start'], function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('app/views/**/*.jade', ['jade']);
+	gulp.watch('app/views/**/*.jade', ['views']);
 	gulp.watch('app/styles/**/*.scss', ['styles']);
 	gulp.watch('app/scripts/**/*.js', ['scripts']);
 });
