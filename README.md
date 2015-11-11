@@ -28,18 +28,18 @@ Then install your project's default dependencies (Modernizr, jQuery, Bootstrap):
 
  	bower install
 
-To install more dependencies in your project do it via Bower with the --save option, like so:
+To install more dependencies on your project do it via Bower with the --save option, like so:
 
  	bower install --save font-awesome
 
 Package not present on Bower? Don't worry, have a look at the [Helpers](#helpers) section for a workaround.
 
 ## Usage
-Once you have defined all your assets you can start to work on your project, run:
+Once you have defined all your assets you can start to work on your project:
 
 	gulp
 
-This will open up your favorite browser on the project's index page, and while you work on the code it will auto-refresh the page in real-time to reflect your code's changes (css, js, jade). Try to open the webpage on multiple devices simultaneously and see how they follow your movements cross-device.
+This command will open up your favorite browser on the project's index page, and while you work on the code it will auto-refresh the page in real-time to reflect your code's changes (css, js, jade). Try to open the webpage on multiple devices simultaneously and see how they follow your movements cross-device.
 
 To work smoothly Crusader let you build you project using some pre-processors:
 

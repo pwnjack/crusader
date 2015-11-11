@@ -4,17 +4,17 @@
 
 @import 'config';
 
-/* Fontface */
+// Fontface
 @import 'partials/fontface';
 
-/* SMACSS */
+// SMACSS
 @import 'partials/base';
 @import 'partials/layout';
 @import 'partials/modules';
 @import 'partials/state';
 @import 'partials/theme';
 
-/* Other */
+// Other
 @import 'partials/plugins';
 @import 'partials/responsive';
 @import 'partials/shame';
