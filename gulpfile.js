@@ -59,7 +59,7 @@ gulp.task('images', ['clear_cache'], function() {
 });
 
 gulp.task('fonts', function() {
-	// return gulp.src(config.vendorFiles.font)
+	// return gulp.src(config.vendorFiles.fonts)
 	// .pipe(gulp.dest('dist/fonts'))
 	return gulp.src([
 		'app/**/fonts/*.eot',
