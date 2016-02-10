@@ -1,8 +1,43 @@
 header.l-header
-	nav(role="navigation").navbar.navbar-default.navbar-fixed-top
-		a(href="/").navbar-brand Crusader
-		ul.nav.navbar-nav
-			li.active
-				a(href="#") Home
-			li
-				a(href="#") Link
+
+    nav.navbar.navbar-default(role='navigation')
+      .container-fluid
+        //- Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Crusader
+
+        //- Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#') Link
+            li
+              a(href='#') Link
+
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')
+            button.btn.btn-default(type='submit') Submit
+            
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Dropdown 
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li
+                  a(href='#') Separated link
+        //- .navbar-collapse

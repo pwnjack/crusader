@@ -2,17 +2,23 @@
    Base
    ======================= */
 
+// Base html elements styling
+
 body {
 	font-family: $font-stack;
-	color: $font-primary-color;
+	color: $text-color;
 	background: $body-bg;
 }
 
 a {
-	color: $primary-color;
+	color: $link-color;
 	&:hover {color: $link-hover-color;}
 }
 
-h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {
+	color: $title-color;
+}
 
-p {}
+p {
+	color: text-color;
+}

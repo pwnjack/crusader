@@ -2,16 +2,10 @@
    Modules
    ======================= */
 
+// Modules are object-oriented rules that aims to create stand-alone working elements
+
 .box {}
 
-.btn-default {
-	color: $btn-default-color;
-	background: $btn-default-bg;
-	border-color: $btn-default-border;
-}
+.btn {}
 
-.btn-primary {
-	color: $btn-primary-color;
-	background: $btn-primary-bg;
-	border-color: $btn-primary-border;
-}
+.widget {}

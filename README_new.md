@@ -27,7 +27,7 @@ Then go on and install the default Bower packages:
 	bower install
 
 ## How to use it
-To start use the command:
+To start the magic use the command:
 
 	gulp
 

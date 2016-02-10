@@ -2,32 +2,23 @@
    Config
    ======================= */
 
+// Setup here your base variables like colors, font families, mobile breakpoints, and default styling.
+
 // Colors
-$orange: 					#ff6600;
+$orange: 					#de5900;
 $black:						#333333;
 
-$primary-color:				darken($orange, 6.5%); // #de5900
-$secondary-color:			$black;
+$color:						$orange;
 $body-bg:					#fff;
 $text-color:				$black;
+$title-color:				$black;
 
-// Typography
+// Font
 $font-stack:				Helvetica, sans-serif;
-$font-primary-color:		$text-color;
-$font-secondary-color:		lighten($black, 15%);
 
 // Links
-$link-color:				$primary-color;
+$link-color:				$color;
 $link-hover-color:			darken($link-color, 15%);
-
-// Buttons
-$btn-default-color:			#333;
-$btn-default-bg:			#fff;
-$btn-default-border:		#ccc;
-
-$btn-primary-color:			#fff;
-$btn-primary-bg:			$primary-color;
-$btn-primary-border:		darken($btn-primary-bg, 5%);
 
 
 // Media queries breakpoints
