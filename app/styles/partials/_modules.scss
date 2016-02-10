@@ -4,8 +4,15 @@
 
 // Modules are object-oriented rules that aims to create stand-alone working elements
 
-.box {}
+.post {
+	&__img  {}
+	&__title  {}
+	&__desc {}
+}
 
-.btn {}
+.btn {
+	&:hover {}
+	&:focus, &:active {}
+}
 
 .widget {}
