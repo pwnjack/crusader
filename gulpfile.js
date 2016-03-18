@@ -64,6 +64,7 @@ gulp.task('fonts', function() {
 	return gulp.src([
 		'app/**/fonts/*.eot',
 		'app/**/fonts/*.woff',
+		'app/**/fonts/*.woff2',
 		'app/**/fonts/*.svg',
 		'app/**/fonts/*.ttf'
 	])
