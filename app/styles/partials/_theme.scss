@@ -3,35 +3,3 @@
    ======================= */
 
 // Basically, just colors and fonts.
-
-// Colors
-body {
-	font-family: $font-stack;
-	color: $text-color;
-	background: $body-bg;
-}
-
-// Typography
-h1, h2, h3, h4, h5, h6 {
-	color: $title-color;
-}
-
-p {
-	color: text-color;
-}
-
-// Buttons
-.btn-default {}
-.btn-primary {}
-
-// Links
-a {
-	color: $link-color;
-	&:hover {color: $link-hover-color;}
-}
-
-// Header
-header {}
-
-// Footer
-footer {}
