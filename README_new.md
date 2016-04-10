@@ -2,16 +2,16 @@
 Front-end development as it should be.
 
 ## What it is
-Basically is a gulp-based, local, live-preview webserver with built-in live-reload. Made for development of scalable, maintainable and flexible front-end projects.
+Basically is a gulp-based, local webserver with built-in live-reload. Made for development of scalable, maintainable and flexible front-end projects.
 
-You can build you project using Jade for HTML templating and Sass for CSS preprocessing, all CSS is structured following OOCSS, SMACSS and BEM techniques.
+You can build you project using Jade for HTML templating and Scss for CSS preprocessing, all CSS is structured following OOCSS, SMACSS and BEM principles.
 
 It also features:
 
 - Bower package installation (including markup injection)
 - BrowserSync to live-preview code changes on the fly
 - JSHint javascript linting
-- CSS maps for Sass debugging
+- CSS maps for Scss debugging
 - Code minimization
 - Image optimization
 
