@@ -1,87 +1,65 @@
 # Crusader
-Purge the evil from frontend development
+Front-end development as it should be.
 
-As we all know evil dwells deeply within CSS and HTML, just poorly scalable and maintainable. Crusader comes in handy, providing a complete coding environment to make static web development as painless as possible. With Crusader you can take the advantages of more versatile languages like [Jade](http://jade-lang.com) and [Sass](http://sass-lang.com) to make your workflow smooth, efficient and flexible.
+The evil resides within CSS and HTML, poorly scalable and maintainable languages. Crusader comes to the rescue, providing a complete coding environment for your front-end projects. With Crusader you can take the advantages of more versatile and flexible languages like [Jade](http://jade-lang.com) and [Sass](http://sass-lang.com) to make your workflow smooth and more efficient.
 
-Crusader also features a local web-server ([BrowserSync](http://www.browsersync.io)) to preview your work while you are developing, and some other interesting features, read on for more information.
+Purge the evil from front-end development!
 
-## Getting Started
-To run Crusader you need all the following softwares installed on your computer.
+## What it is
+Basically is a gulp-based build tool featuring a local webserver with built-in live-reload and Bower to manage dependencies effortlessly.
 
- - [Node](http://nodejs.org)
- - [Npm](https://www.npmjs.com)
- - [Gulp](http://gulpjs.com)
- - [Bower](http://bower.io)
- - [Git](http://github.com)
+You can build you project using Jade for HTML templating and Sass for CSS preprocessing, all CSS is structured following OOCSS, SMACSS and BEM techniques.
 
-To get started clone this repo on your local machine:
+It features:
 
-	git clone https://github.com/pwnjack/crusader.git
+- Bower package installation (including markup injection)
+- BrowserSync to live-preview code changes on the fly (with cross-device sync!)
+- JSHint javascript linting
+- CSS maps for Sass debugging
+- CSS vendor autoprefixer
+- Code minimization
+- Image optimization
 
-Move inside the newly created "crusader" folder and install the default dev-dependencies:
-
-	cd crusader
+## Setup
+Clone this git on your local machine then move inside it's folder and run:
 
 	npm install
 
-Then install your project's default dependencies (Modernizr, jQuery, Bootstrap):
+This will install the dev dependencies.
 
- 	bower install
+Then go on and install the default Bower packages:
 
-To install more dependencies on your project do it via Bower with the --save option, like so:
-
- 	bower install --save font-awesome
-
-Package not present on Bower? Don't worry, have a look at the [Helpers](#helpers) section for a workaround.
+	bower install
 
 ## Usage
-Once you have defined all your assets you can start to work on your project:
+To start the magic use the command:
 
 	gulp
 
-This command will open up your favorite browser on the project's index page, and while you work on the code it will auto-refresh the page in real-time to reflect your code's changes (css, js, jade). Try to open the webpage on multiple devices simultaneously and see how they follow your movements cross-device.
+It will wire-up all your project's dependencies and start the web server while opening your browser on the index page. It will also start watching your files for code changes and refresh the browser in real-time as you save.
 
-To work smoothly Crusader let you build you project using some pre-processors:
+To stop the server: CTRL+C
 
-- [Jade](http://jade-lang.com) for HTML
-- [Sass](http://sass-lang.com) for CSS
+To install a Bower package use the --save option:
 
-Crusader have more nice features:
+	bower install --save package-name
 
-- Images web-optimization with [Imagemin](https://github.com/imagemin/imagemin)
-- CSS vendor-prefixing with [Autoprefixer](https://github.com/postcss/autoprefixer)
-- Code minimization for production
-- [Bower](http://bower.io) dependencies injection
-- Local preview web-server with [BrowserSync](http://www.browsersync.io)
-
-When you have finished developing and your project is ready for production, build it:
-
-	gulp build
-
-Your project's optimized version will be stored in the freshly created "dist" folder.
-
-## Helpers
-If you want to install an asset later on, stop the server in your terminal (CTRL+C), install the asset via Bower (as shown above) and then wire it up in your markup:
-
-	gulp wiredep
-
-Then start the server again:
+To start the server again run:
 
 	gulp serve
 
-And you can get back to work on your code.
+Once satisfied, to start the build task for production: 
 
-If you want to install an asset that is not available on Bower you can do it by copy-pasting it's code in to the following files (depending on code language):
+	gulp build
 
-- Javascript into "app/plugins/*.js"
-- CSS into "app/styles/partials/_plugins.scss"
-- For images and fonts you have to add their full path reference into "config.json"
+When finished the production-ready project will be inside the freshly created `/dist` folder.
 
-If you need to copy extra fonts and images remember to uncomment the code lines related to [config.json](https://github.com/pwnjack/crusader/blob/master/config.json) inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js) first.
+### F.A.Q.
+Q: *Package not present on bower, how can I add it to my dependencies?*
+A: Copy-paste it's raw code directly in the `_plugins.scss` file for CSS and inside the `plugins` folder for js
 
-To delete all compiled code and clean the project's "dist" folder run:
+Q: *Package present on Bower but is not pulling the correct file.*
+A: Edit `/bower.json` and add an "overrides" entry to specify the needed asset.
 
-    gulp clean
-
-### Feedback
-Thanks for reading, your feedback is much appreciated.
+Q: *I need to copy also some images and font files for some dependencies, how do I do it?*
+A: You can force it to import some extra files, to do so define them in [config.json](https://github.com/pwnjack/crusader/blob/master/config.json). To let it work correctly remember to uncomment the code lines related to `config.json` inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js).
