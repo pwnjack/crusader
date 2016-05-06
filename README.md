@@ -54,12 +54,19 @@ Once satisfied, to start the build task for production:
 
 When finished the production-ready project will be inside the freshly created `/dist` folder.
 
+To delete all compiled code and the entire `dist` folder, run:
+
+    gulp clean
+
 ### F.A.Q.
-Q: *Package not present on bower, how can I add it to my dependencies?*
-A: Copy-paste it's raw code directly in the `_plugins.scss` file for CSS and inside the `plugins` folder for js
+__Q:__ *Package not present on bower, how can I add it to my dependencies?*
 
-Q: *Package present on Bower but is not pulling the correct file.*
-A: Edit `/bower.json` and add an "overrides" entry to specify the needed asset.
+__A:__ Copy-paste it's raw code directly in the `_plugins.scss` file for CSS and inside the `plugins` folder for js
 
-Q: *I need to copy also some images and font files for some dependencies, how do I do it?*
-A: You can force it to import some extra files, to do so define them in [config.json](https://github.com/pwnjack/crusader/blob/master/config.json). To let it work correctly remember to uncomment the code lines related to `config.json` inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js).
+__Q:__ *Package present on Bower but is not pulling the correct file.*
+
+__A:__ Edit `/bower.json` and add an "overrides" entry to specify the needed asset.
+
+__Q:__ *I need to copy also some images and font files for some dependencies, how do I do it?*
+
+__A:__ You can force it to import some extra files, to do so define them in [config.json](https://github.com/pwnjack/crusader/blob/master/config.json). To let it work correctly remember to uncomment the code lines related to `config.json` inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js).
