@@ -6,19 +6,19 @@ The evil resides within CSS and HTML, poorly scalable and maintainable languages
 Purge the evil from front-end development!
 
 ## What it is
-Basically is a gulp-based build tool featuring a local webserver with built-in live-reload and Bower to manage dependencies effortlessly.
+Basically is a [Gulp](http://gulpjs.com)-based build tool featuring a local webserver with built-in live-reload and [Bower](http://bower.io) to manage dependencies effortlessly.
 
-You can build you project using Jade for HTML templating and Sass for CSS preprocessing, all CSS is structured following OOCSS, SMACSS and BEM techniques.
+You can build you project using Jade for HTML templating and Sass for CSS preprocessing, all CSS is structured following [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss), [SMACSS](https://smacss.com) and [BEM](http://getbem.com) principles.
 
 It features:
 
 - Bower package installation (including markup injection)
-- BrowserSync to live-preview code changes on the fly (with cross-device sync!)
+- [BrowserSync](http://www.browsersync.io) to live-preview code changes on the fly (with cross-device sync!)
 - JSHint javascript linting
 - CSS maps for Sass debugging
-- CSS vendor autoprefixer
+- CSS vendor [Autoprefixer](https://github.com/postcss/autoprefixer)
 - Code minimization
-- Image optimization
+- Image optimization via [Imagemin](https://github.com/imagemin/imagemin)
 
 ## Setup
 Clone this git on your local machine then move inside it's folder and run:
@@ -70,3 +70,4 @@ __A:__ Edit `/bower.json` and add an "overrides" entry to specify the needed ass
 __Q:__ *I need to copy also some images and font files for some dependencies, how do I do it?*
 
 __A:__ You can force it to import some extra files, to do so define them in [config.json](https://github.com/pwnjack/crusader/blob/master/config.json). To let it work correctly remember to uncomment the code lines related to `config.json` inside the [gulpfile.js](https://github.com/pwnjack/crusader/blob/master/gulpfile.js).
+
