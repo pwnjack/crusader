@@ -1,3 +1,8 @@
 footer.l-footer
 	.container
-		p &copy; pwnjack. All rights reserved.
+		p &copy; #[span#year] pwnjack. All rights reserved.
+
+script.
+	var d = new Date();
+	var n = d.getFullYear();
+	document.getElementById("year").innerHTML = n;
