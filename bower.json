@@ -1,16 +1,12 @@
 {
   "name": "crusader",
-  "version": "0.0.1",
-  "authors": [
-    "pwnjack <pwnjack@gmail.com>"
-  ],
-  "description": "",
+  "description": "Purge the evil from frontend development",
   "main": "gulpfile.js",
-  "moduleType": [
-    "node"
+  "authors": [
+    "@pwnjack"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/pwnjack/crusader",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -20,19 +16,19 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.4.0",
-    "bootstrap": "~3.3.5",
-    "holderjs": "~2.9.3"
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "holderjs": "^2.9.3"
   },
   "overrides": {
-    "font-awesome": {
-      "main": "css/font-awesome.css"
-    },
     "bootstrap": {
       "main": [
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
+    },
+    "font-awesome": {
+      "main": "css/font-awesome.css"
     }
   }
 }

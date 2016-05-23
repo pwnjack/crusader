@@ -7,8 +7,6 @@
     "images": [
       "app/bower_components/module-name/dist/images/**/*.*",
       "app/bower_components/module-name/dist/images/**/*.*"
-    ],
-    "css": [],
-    "js": []
+    ]
   }
 }

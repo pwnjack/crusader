@@ -2,4 +2,28 @@
    Helpers
    ======================= */
 
-// Helper classes to be used across other stylesheets
+// Helper classes to be used across other stylesheets, should contain declarations only (other rules are here for demo purposes)
+
+// .v-center{
+// 	background: #ffdb4c;
+// 	height: 300px;
+// 	position: relative;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// }
+
+// // Usage
+// .element {
+// 	@extend .v-center;	
+// }
+
+// // Center X and Y
+// .parent {
+//   position: relative;
+// }
+// .child {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
