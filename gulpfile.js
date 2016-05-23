@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
 	.pipe($.jshint())
 	.pipe($.jshint.reporter('jshint-stylish'))
 	.pipe(gulp.dest('app/.tmp/'))
+	.pipe(reload({stream:true}));
 });
 
 gulp.task('views', function() {
@@ -50,6 +51,7 @@ gulp.task('views', function() {
 		pretty: true
 	}))
 	.pipe(gulp.dest('app/'))
+	.pipe(reload({stream:true}));
 });
 
 gulp.task('clean', function(cb) {
