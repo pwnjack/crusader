@@ -45,9 +45,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('views', function() {
-	return gulp.src('app/views/*.jade')
+	return gulp.src('app/views/*.pug')
 	.pipe($.plumber())
-	.pipe($.jade({
+	.pipe($.pug({
 		pretty: true
 	}))
 	.pipe(gulp.dest('app/'))
@@ -67,7 +67,7 @@ gulp.task('watch', function() {
 			baseDir: 'app'
 		}
 	});
-	gulp.watch('app/views/**/*.jade', ['views']);
+	gulp.watch('app/views/**/*.pug', ['views']);
 	gulp.watch('app/styles/**/*.scss', ['styles']);
 	gulp.watch('app/scripts/**/*.js', ['scripts']);
 	gulp.watch([
@@ -83,7 +83,7 @@ gulp.task('default', ['styles', 'scripts', 'views', 'watch']);
 // Wire-up assets
 
 gulp.task('wiredep', function () {
-  gulp.src('app/views/partials/master.jade')
+  gulp.src('app/views/partials/master.pug')
     .pipe(wiredep({ignorePath: '../../'}))
     .pipe(gulp.dest('app/views/partials/'));
 });
