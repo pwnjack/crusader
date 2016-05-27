@@ -77,8 +77,6 @@ gulp.task('watch', function() {
 	], {cwd: 'app'}, reload);
 });
 
-gulp.task('default', ['styles', 'scripts', 'views', 'watch']);
-
 
 // Wire-up assets
 
@@ -146,6 +144,10 @@ gulp.task('extra', function() {
 	.pipe(gulp.dest('dist'))
 });
 
-gulp.task('build', ['styles', 'scripts', 'views'], function() {
+gulp.task('code', ['styles', 'scripts', 'views']);
+
+gulp.task('default', ['code', 'watch']);
+
+gulp.task('build', ['code'], function() {
 	gulp.start('deploy', 'fonts', 'images', 'extra');
 });
