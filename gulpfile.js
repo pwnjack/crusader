@@ -120,7 +120,7 @@ gulp.task('clear_cache', function (done) {
 gulp.task('images', ['clear_cache'], function() {
 	// return gulp.src(config.vendorFiles.images)
 	// .pipe(gulp.dest('dist/images'))
-	return gulp.src('app/images/*')
+	return gulp.src('app/images/**')
 	.pipe($.cache($.imagemin({
 		optimizationLevel: 3,
 		progressive: true,
