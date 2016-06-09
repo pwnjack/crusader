@@ -7,6 +7,8 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	reload = browserSync.reload;
 
+// var config = require('./config.json');
+
 // Development
 
 gulp.task('styles', function() {
@@ -64,7 +66,7 @@ gulp.task('clean', function(cb) {
 gulp.task('watch', function() {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: 'app/'
 		}
 	});
 	gulp.watch('app/views/**/*.pug', ['views']);
@@ -74,7 +76,7 @@ gulp.task('watch', function() {
 		'*.html',
 		'.tmp/main.css',
 		'.tmp/main.js'
-	], {cwd: 'app'}, reload);
+	], {cwd: 'app/'}, reload);
 });
 
 
@@ -110,7 +112,7 @@ gulp.task('fonts', function() {
 		'app/**/fonts/*.ttf'
 	])
 	.pipe($.flatten())
-	.pipe(gulp.dest('dist/fonts'))
+	.pipe(gulp.dest('dist/fonts/'))
 });
 
 
@@ -126,7 +128,7 @@ gulp.task('images', ['clear_cache'], function() {
 		progressive: true,
 		interlaced: true
 	})))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/'))
 });
 
 gulp.task('extra', function() {
@@ -141,7 +143,7 @@ gulp.task('extra', function() {
 		'!app/.tmp/**',
 		'!app/.tmp'
 	], { dot: true })
-	.pipe(gulp.dest('dist'))
+	.pipe(gulp.dest('dist/'))
 });
 
 gulp.task('code', ['styles', 'scripts', 'views']);
