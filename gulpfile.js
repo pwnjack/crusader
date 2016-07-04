@@ -91,7 +91,7 @@ gulp.task('wiredep', function () {
 
 // Build for production
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['wiredep'], function() {
 	var gulpif = require('gulp-if');
 	return gulp.src('app/*.html')
 	.pipe($.useref())
