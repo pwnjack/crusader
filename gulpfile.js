@@ -38,10 +38,10 @@ gulp.task('scripts', function() {
 		"plugins/*.js",
 		"main.js"
 	]))
-	.pipe($.concat('main.js'))
-	.pipe($.sourcemaps.write())
 	.pipe($.jshint())
 	.pipe($.jshint.reporter('jshint-stylish'))
+	.pipe($.concat('main.js'))
+	.pipe($.sourcemaps.write())
 	.pipe(gulp.dest('app/.tmp/'))
 	.pipe(reload({stream:true}));
 });
