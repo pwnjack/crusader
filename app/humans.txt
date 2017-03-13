@@ -3,12 +3,14 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
+	
+	thewizard -- Web Development -- @thewizard.it -- <ask@thewizard.it>
     pwnjack -- Web Designer -- @pwnjack -- <pwnjack@gmail.com>
 
 # THANKS
 
     Crusader -- Project -- http://github.com/pwnjack/crusader
+    The Wizard -- Web Development -- http://github.com/thewizardry
 
 # TECHNOLOGY COLOPHON
 
