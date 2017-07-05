@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 	wiredep = require('wiredep').stream,
 	del = require('del'),
 	browserSync = require('browser-sync'),
-	reload = browserSync.reload;
+	reload = browserSync.reload,
+	surge = require('gulp-surge');
 
 // var config = require('./config.json');
 
@@ -145,6 +146,13 @@ gulp.task('extra', function() {
 	], { dot: true })
 	.pipe(gulp.dest('dist/'))
 });
+
+gulp.task('surge', [], function () {
+  return surge({
+    project: './dist',         // Path to your static build directory
+    domain: 'crusader.surge.sh'  // Your domain or Surge subdomain
+  })
+})
 
 gulp.task('code', ['styles', 'scripts', 'views']);
 
