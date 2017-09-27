@@ -3,9 +3,9 @@
 # The humans responsible & technology colophon
 
 # TEAM
-	
+
 	thewizard -- Web Development -- @thewizard.it -- <ask@thewizard.it>
-    pwnjack -- Web Designer -- @pwnjack -- <pwnjack@gmail.com>
+	pwnjack -- Web Designer -- @pwnjack -- <pwnjack@gmail.com>
 
 # THANKS
 
