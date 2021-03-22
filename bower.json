@@ -7,6 +7,7 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/pwnjack/crusader",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,19 +17,19 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "font-awesome": "^4.6.3",
-    "holderjs": "^2.9.3"
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^5.15.3",
+    "holderjs": "^2.9.8"
   },
   "overrides": {
     "bootstrap": {
       "main": [
         "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
+        "dist/js/bootstrap.bundle.js"
       ]
     },
     "font-awesome": {
-      "main": "css/font-awesome.css"
+      "main": "css/fontawesome.css"
     }
   }
 }
