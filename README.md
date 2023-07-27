@@ -1,14 +1,14 @@
 # Crusader
 Front-end development done right.
 
-CSS and HTML have long been plagued by poor scalability and maintainability. But fear not! Crusader is here to save the day, offering a complete coding environment for your front-end projects. With Crusader, you can harness the power of more versatile and flexible languages like Jade and Sass, making your workflow smoother and more efficient.
+CSS and HTML have long been plagued by poor scalability and maintainability. But fear not! Crusader is here to save the day, offering a complete coding environment for your front-end projects. With Crusader, you can harness the power of more versatile and flexible languages like Pug and Sass, making your workflow smoother and more efficient.
 
 Banish the evil from front-end development!
 
 ## What is Crusader?
 Crusader is essentially a [Gulp](http://gulpjs.com)-based build tool that includes a local web server with built-in live-reload and [Bower](http://bower.io) for effortless dependency management.
 
-Using Crusader, you can build your project with Jade for HTML templating and Sass for CSS preprocessing, all while adhering to the principles of [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss), [SMACSS](https://smacss.com), and [BEM](http://getbem.com) for structured CSS.
+Using Crusader, you can build your project with Pug for HTML templating and Sass for CSS preprocessing, all while adhering to the principles of [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss), [SMACSS](https://smacss.com), and [BEM](http://getbem.com) for structured CSS.
 
 Key Features:
 - Bower package installation (including markup injection)
